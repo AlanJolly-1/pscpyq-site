@@ -1,3 +1,1287 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><title>PSC PYQ</title></head>
-<body><p><a href="/policies.html">Privacy & policies</a></p></body></html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="PSC PYQ — Kerala PSC previous year questions practice app. Topic-wise quizzes, progress tracking, and daily rewards."
+    />
+    <title>PSC PYQ — Kerala PSC Practice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Outfit:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --brand: #3d4b8a;
+        --brand-deep: #2a3566;
+        --brand-light: #5c6bb8;
+        --accent: #f04b07;
+        --accent-soft: #fff0e8;
+        --mint: #0f8f79;
+        --mint-soft: #eafef8;
+        --rose: #e0084f;
+        --bg: #f6f7fc;
+        --surface: #ffffff;
+        --text: #0f172a;
+        --muted: #64748b;
+        --border: rgba(61, 75, 138, 0.12);
+        --shadow: 0 24px 48px -12px rgba(42, 53, 102, 0.18);
+        --radius: 18px;
+        --font-display: "Outfit", system-ui, sans-serif;
+        --font-body: "DM Sans", system-ui, sans-serif;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--font-body);
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.55;
+        overflow-x: hidden;
+      }
+
+      .noise {
+        pointer-events: none;
+        position: fixed;
+        inset: 0;
+        opacity: 0.035;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        z-index: 0;
+      }
+
+      .orb {
+        position: fixed;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.45;
+        z-index: 0;
+        animation: float 14s ease-in-out infinite;
+      }
+      .orb-a {
+        width: 420px;
+        height: 420px;
+        background: #8ea2ff;
+        top: -120px;
+        right: -80px;
+      }
+      .orb-b {
+        width: 320px;
+        height: 320px;
+        background: #ffb16a;
+        bottom: 20%;
+        left: -100px;
+        animation-delay: -5s;
+      }
+      .orb-c {
+        width: 260px;
+        height: 260px;
+        background: #58d6bc;
+        bottom: -60px;
+        right: 15%;
+        animation-delay: -9s;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translate(0, 0) scale(1);
+        }
+        50% {
+          transform: translate(12px, -18px) scale(1.04);
+        }
+      }
+
+      a {
+        color: var(--brand);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .wrap {
+        position: relative;
+        z-index: 1;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 22px;
+      }
+
+      /* Nav */
+      header.site-nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: blur(14px);
+        background: rgba(246, 247, 252, 0.82);
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 14px 22px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 1.15rem;
+        color: var(--text);
+        text-decoration: none;
+      }
+      .logo:hover {
+        text-decoration: none;
+      }
+      .logo-mark {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        background: linear-gradient(145deg, var(--brand-light), var(--brand-deep));
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        box-shadow: 0 8px 20px rgba(61, 75, 138, 0.35);
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .nav-links a:not(.btn) {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--muted);
+        border-radius: 10px;
+        text-decoration: none;
+        transition: color 0.2s, background 0.2s;
+      }
+      .nav-links a:not(.btn):hover {
+        color: var(--text);
+        background: rgba(61, 75, 138, 0.08);
+        text-decoration: none;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 11px 20px;
+        border-radius: 12px;
+        font-family: var(--font-body);
+        font-weight: 600;
+        font-size: 0.92rem;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+      }
+      .btn:hover {
+        text-decoration: none;
+        transform: translateY(-1px);
+      }
+      .btn:active {
+        transform: translateY(0);
+      }
+      .btn-primary {
+        background: linear-gradient(145deg, var(--brand-light), var(--brand));
+        color: #fff;
+        box-shadow: 0 10px 28px rgba(61, 75, 138, 0.35);
+      }
+      .btn-primary:hover {
+        box-shadow: 0 14px 32px rgba(61, 75, 138, 0.42);
+      }
+      .btn-ghost {
+        background: var(--surface);
+        color: var(--brand);
+        border: 1px solid var(--border);
+      }
+
+      /* Hero */
+      .hero {
+        padding: 56px 0 72px;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: center;
+      }
+      @media (max-width: 860px) {
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 14px;
+        border-radius: 999px;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--brand);
+        margin-bottom: 18px;
+        box-shadow: 0 4px 16px rgba(61, 75, 138, 0.08);
+      }
+      .badge-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--mint);
+        animation: pulse 2s ease infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.6;
+          transform: scale(0.85);
+        }
+      }
+
+      h1 {
+        font-family: var(--font-display);
+        font-size: clamp(2.2rem, 5vw, 3.25rem);
+        font-weight: 800;
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+        margin: 0 0 16px;
+      }
+      h1 span {
+        background: linear-gradient(120deg, var(--brand), var(--brand-light));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .hero-lead {
+        font-size: 1.08rem;
+        color: var(--muted);
+        max-width: 32rem;
+        margin: 0 0 28px;
+      }
+      .hero-cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 32px;
+      }
+
+      .stats-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .stat {
+        min-width: 100px;
+      }
+      .stat-value {
+        font-family: var(--font-display);
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--brand);
+        line-height: 1.1;
+      }
+      .stat-label {
+        font-size: 0.82rem;
+        color: var(--muted);
+        margin-top: 2px;
+      }
+
+      /* Phone mock */
+      .phone-wrap {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        perspective: 900px;
+      }
+      .phone {
+        width: min(300px, 88vw);
+        aspect-ratio: 9 / 19;
+        border-radius: 36px;
+        background: linear-gradient(160deg, #1a2248 0%, var(--brand-deep) 100%);
+        padding: 12px;
+        box-shadow: var(--shadow), 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+        transform: rotateY(-8deg) rotateX(4deg);
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+      .phone-wrap:hover .phone {
+        transform: rotateY(0deg) rotateX(0deg);
+      }
+      .phone-screen {
+        height: 100%;
+        border-radius: 28px;
+        background: var(--surface);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+      }
+      .phone-header {
+        padding: 16px 16px 10px;
+        background: linear-gradient(180deg, #eef3ff, #fff);
+      }
+      .phone-header h3 {
+        margin: 0;
+        font-family: var(--font-display);
+        font-size: 1rem;
+        font-weight: 700;
+      }
+      .phone-header p {
+        margin: 4px 0 0;
+        font-size: 0.72rem;
+        color: var(--muted);
+      }
+      .phone-body {
+        flex: 1;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .mini-card {
+        padding: 12px;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        transition: transform 0.25s, box-shadow 0.25s;
+        cursor: default;
+      }
+      .mini-card.active {
+        transform: scale(1.02);
+        box-shadow: 0 8px 24px rgba(61, 75, 138, 0.12);
+        border-color: rgba(61, 75, 138, 0.25);
+      }
+      .mini-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        font-size: 1rem;
+        flex-shrink: 0;
+      }
+      .mini-card strong {
+        display: block;
+        font-size: 0.82rem;
+      }
+      .mini-card span {
+        font-size: 0.68rem;
+        color: var(--muted);
+      }
+      .phone-progress {
+        margin-top: auto;
+        padding: 12px;
+        background: var(--bg);
+        border-radius: 14px;
+      }
+      .progress-bar {
+        height: 6px;
+        background: #e2e8f0;
+        border-radius: 999px;
+        overflow: hidden;
+        margin-top: 8px;
+      }
+      .progress-fill {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, var(--brand), var(--mint));
+        border-radius: 999px;
+        transition: width 0.6s ease;
+      }
+
+      .phone-glow {
+        position: absolute;
+        inset: 10% 5%;
+        background: radial-gradient(circle, rgba(142, 162, 255, 0.35), transparent 70%);
+        z-index: -1;
+      }
+
+      /* Sections */
+      section {
+        padding: 64px 0;
+      }
+      section h2 {
+        font-family: var(--font-display);
+        font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin: 0 0 10px;
+        text-align: center;
+      }
+      .section-lead {
+        text-align: center;
+        color: var(--muted);
+        max-width: 520px;
+        margin: 0 auto 40px;
+        font-size: 1rem;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 0.65s ease, transform 0.65s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Subject tabs */
+      .subject-tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 28px;
+      }
+      .subject-tab {
+        padding: 10px 18px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: var(--surface);
+        font-family: var(--font-body);
+        font-weight: 600;
+        font-size: 0.88rem;
+        color: var(--muted);
+        cursor: pointer;
+        transition: all 0.25s;
+      }
+      .subject-tab:hover {
+        border-color: var(--brand-light);
+        color: var(--brand);
+      }
+      .subject-tab.active {
+        background: var(--brand);
+        color: #fff;
+        border-color: var(--brand);
+        box-shadow: 0 8px 20px rgba(61, 75, 138, 0.3);
+      }
+
+      .subject-panel {
+        display: none;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+        animation: fadeIn 0.4s ease;
+      }
+      .subject-panel.active {
+        display: grid;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .topic-chip {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 18px 20px;
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        transition: transform 0.2s, box-shadow 0.2s;
+      }
+      .topic-chip:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 28px rgba(61, 75, 138, 0.1);
+      }
+      .topic-chip .icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        font-size: 1.25rem;
+        flex-shrink: 0;
+      }
+      .topic-chip h4 {
+        margin: 0 0 4px;
+        font-size: 1rem;
+        font-family: var(--font-display);
+      }
+      .topic-chip p {
+        margin: 0;
+        font-size: 0.85rem;
+        color: var(--muted);
+      }
+
+      /* Features */
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 18px;
+      }
+      .feature-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 24px;
+        transition: transform 0.25s, border-color 0.25s;
+      }
+      .feature-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(61, 75, 138, 0.28);
+      }
+      .feature-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        display: grid;
+        place-items: center;
+        font-size: 1.4rem;
+        margin-bottom: 14px;
+      }
+      .feature-card h3 {
+        margin: 0 0 8px;
+        font-family: var(--font-display);
+        font-size: 1.1rem;
+      }
+      .feature-card p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      /* How it works */
+      .steps {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        counter-reset: step;
+      }
+      @media (max-width: 720px) {
+        .steps {
+          grid-template-columns: 1fr;
+        }
+      }
+      .step {
+        background: var(--surface);
+        border-radius: var(--radius);
+        padding: 28px 22px;
+        border: 1px solid var(--border);
+        position: relative;
+        overflow: hidden;
+      }
+      .step::before {
+        counter-increment: step;
+        content: counter(step);
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        font-family: var(--font-display);
+        font-size: 3rem;
+        font-weight: 800;
+        color: rgba(61, 75, 138, 0.08);
+        line-height: 1;
+      }
+      .step h3 {
+        margin: 0 0 8px;
+        font-family: var(--font-display);
+        font-size: 1.05rem;
+      }
+      .step p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      /* FAQ */
+      .faq-list {
+        max-width: 640px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .faq-item {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        overflow: hidden;
+      }
+      .faq-q {
+        width: 100%;
+        padding: 18px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        background: none;
+        border: none;
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-align: left;
+        color: var(--text);
+        cursor: pointer;
+      }
+      .faq-q .chev {
+        width: 24px;
+        height: 24px;
+        border-radius: 8px;
+        background: var(--bg);
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        transition: transform 0.3s;
+        font-size: 0.75rem;
+      }
+      .faq-item.open .faq-q .chev {
+        transform: rotate(180deg);
+      }
+      .faq-a {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+      }
+      .faq-a-inner {
+        padding: 0 20px 18px;
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+
+      /* CTA band */
+      .cta-band {
+        margin: 0 0 64px;
+        padding: 48px 32px;
+        border-radius: 24px;
+        background: linear-gradient(135deg, var(--brand-deep), var(--brand));
+        color: #fff;
+        text-align: center;
+        box-shadow: var(--shadow);
+      }
+      .cta-band h2 {
+        color: #fff;
+        margin-bottom: 10px;
+      }
+      .cta-band p {
+        margin: 0 auto 24px;
+        max-width: 440px;
+        opacity: 0.9;
+        font-size: 1rem;
+      }
+      .cta-band .btn-primary {
+        background: #fff;
+        color: var(--brand);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      }
+
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 28px 0 40px;
+        text-align: center;
+        font-size: 0.88rem;
+        color: var(--muted);
+      }
+      footer nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 12px;
+      }
+      footer a {
+        font-weight: 500;
+      }
+
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 8px 12px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        color: var(--text);
+      }
+      @media (max-width: 640px) {
+        .menu-toggle {
+          display: block;
+        }
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          padding: 12px 22px 18px;
+          background: rgba(246, 247, 252, 0.98);
+          border-bottom: 1px solid var(--border);
+        }
+        .nav-links.open {
+          display: flex;
+        }
+        header.site-nav {
+          position: relative;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="orb orb-a" aria-hidden="true"></div>
+    <div class="orb orb-b" aria-hidden="true"></div>
+    <div class="orb orb-c" aria-hidden="true"></div>
+
+    <header class="site-nav">
+      <div class="nav-inner">
+        <a class="logo" href="#top">
+          <span class="logo-mark">PYQ</span>
+          PSC PYQ
+        </a>
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+          id="menu-toggle"
+        >
+          ☰
+        </button>
+        <nav class="nav-links" id="nav-menu" aria-label="Main">
+          <a href="#subjects">Subjects</a>
+          <a href="#features">Features</a>
+          <a href="#how">How it works</a>
+          <a href="/policies.html">Privacy &amp; policies</a>
+          <a
+            class="btn btn-primary"
+            href="https://play.google.com/store/apps/details?id=com.pscprepcompanion.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Get the app</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero wrap">
+        <div class="hero-grid">
+          <div class="reveal">
+            <div class="badge">
+              <span class="badge-dot" aria-hidden="true"></span>
+              Built for Kerala PSC aspirants
+            </div>
+            <h1>Master PYQs,<br /><span>one quiz at a time</span></h1>
+            <p class="hero-lead">
+              PSC PYQ turns previous year questions into fast, focused practice — by subject,
+              topic, and exam. Track progress, earn daily rewards, and revise what you forgot.
+            </p>
+            <div class="hero-cta">
+              <a
+                class="btn btn-primary"
+                href="https://play.google.com/store/apps/details?id=com.pscprepcompanion.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Download on Google Play</a
+              >
+              <a class="btn btn-ghost" href="#features">See features</a>
+            </div>
+            <div class="stats-row" aria-label="Highlights">
+              <div class="stat">
+                <div class="stat-value" data-count="9000" data-suffix="+">0</div>
+                <div class="stat-label">Practice questions</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value" data-count="4" data-suffix="">0</div>
+                <div class="stat-label">Core subjects</div>
+              </div>
+              <div class="stat">
+                <div class="stat-value" data-count="100" data-suffix="%">0</div>
+                <div class="stat-label">Free to start</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="phone-wrap reveal">
+            <div class="phone-glow" aria-hidden="true"></div>
+            <div class="phone" id="phone-mock">
+              <div class="phone-screen">
+                <div class="phone-header">
+                  <h3>Today's practice</h3>
+                  <p>Pick a subject and jump in</p>
+                </div>
+                <div class="phone-body" id="phone-cards">
+                  <div class="mini-card active" data-subject="gk" style="--c: #eef3ff">
+                    <div class="mini-icon" style="background: #eef3ff; color: #2640d8">🌐</div>
+                    <div>
+                      <strong>General Knowledge</strong>
+                      <span>4,200+ questions</span>
+                    </div>
+                  </div>
+                  <div class="mini-card" data-subject="math" style="--c: #fff7ea">
+                    <div class="mini-icon" style="background: #fff7ea; color: #f04b07">🔢</div>
+                    <div>
+                      <strong>Mathematics</strong>
+                      <span>1,850+ questions</span>
+                    </div>
+                  </div>
+                  <div class="mini-card" data-subject="eng" style="--c: #eafef8">
+                    <div class="mini-icon" style="background: #eafef8; color: #0f8f79">📖</div>
+                    <div>
+                      <strong>English</strong>
+                      <span>2,100+ questions</span>
+                    </div>
+                  </div>
+                  <div class="mini-card" data-subject="mal" style="--c: #fff0f5">
+                    <div class="mini-icon" style="background: #fff0f5; color: #e0084f">📚</div>
+                    <div>
+                      <strong>Malayalam</strong>
+                      <span>1,400+ questions</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="phone-progress">
+                  <small style="font-size: 0.72rem; color: var(--muted)">Weekly goal</small>
+                  <div style="font-size: 0.82rem; font-weight: 600; margin-top: 4px">
+                    <span id="progress-pct">0</span>% complete
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="subjects" class="wrap">
+        <h2 class="reveal">Practice by subject</h2>
+        <p class="section-lead reveal">
+          Same structure as the app — switch subjects and explore topic-wise PYQ banks.
+        </p>
+        <div class="subject-tabs reveal" role="tablist" aria-label="Subjects">
+          <button type="button" class="subject-tab active" role="tab" aria-selected="true" data-panel="gk">
+            GK
+          </button>
+          <button type="button" class="subject-tab" role="tab" aria-selected="false" data-panel="math">
+            Math
+          </button>
+          <button type="button" class="subject-tab" role="tab" aria-selected="false" data-panel="eng">
+            English
+          </button>
+          <button type="button" class="subject-tab" role="tab" aria-selected="false" data-panel="mal">
+            Malayalam
+          </button>
+        </div>
+
+        <div class="subject-panel active reveal" id="panel-gk" role="tabpanel">
+          <div class="topic-chip">
+            <div class="icon" style="background: #eef3ff">📜</div>
+            <div>
+              <h4>History &amp; Culture</h4>
+              <p>Kerala &amp; India — PYQs with explanations</p>
+            </div>
+          </div>
+          <div class="topic-chip">
+            <div class="icon" style="background: #eef3ff">🏛️</div>
+            <div>
+              <h4>Polity &amp; Governance</h4>
+              <p>Constitution, schemes, institutions</p>
+            </div>
+          </div>
+          <div class="topic-chip">
+            <div class="icon" style="background: #eef3ff">🌍</div>
+            <div>
+              <h4>Geography &amp; Current Affairs</h4>
+              <p>Maps, events, and fact-based drills</p>
+            </div>
+          </div>
+        </div>
+        <div class="subject-panel reveal" id="panel-math" role="tabpanel" hidden>
+          <div class="topic-chip">
+            <div class="icon" style="background: #fff7ea">➗</div>
+            <div>
+              <h4>Arithmetic</h4>
+              <p>Percentages, ratios, time &amp; work</p>
+            </div>
+          </div>
+          <div class="topic-chip">
+            <div class="icon" style="background: #fff7ea">📐</div>
+            <div>
+              <h4>Algebra &amp; Geometry</h4>
+              <p>Equations, mensuration, shortcuts</p>
+            </div>
+          </div>
+          <div class="topic-chip">
+            <div class="icon" style="background: #fff7ea">🧮</div>
+            <div>
+              <h4>Data interpretation</h4>
+              <p>Charts and quick calculation sets</p>
+            </div>
+          </div>
+        </div>
+        <div class="subject-panel reveal" id="panel-eng" role="tabpanel" hidden>
+          <div class="topic-chip">
+            <div class="icon" style="background: #eafef8">✏️</div>
+            <div>
+              <h4>Grammar &amp; Usage</h4>
+              <p>Tenses, articles, error spotting</p>
+            </div>
+          </div>
+          <div class="topic-chip">
+            <div class="icon" style="background: #eafef8">📰</div>
+            <div>
+              <h4>Vocabulary &amp; Idioms</h4>
+              <p>One-word substitutes and phrases</p>
+            </div>
+          </div>
+          <div class="topic-chip">
+            <div class="icon" style="background: #eafef8">📄</div>
+            <div>
+              <h4>Comprehension</h4>
+              <p>Passage-based PYQ practice</p>
+            </div>
+          </div>
+        </div>
+        <div class="subject-panel reveal" id="panel-mal" role="tabpanel" hidden>
+          <div class="topic-chip">
+            <div class="icon" style="background: #fff0f5">അ</div>
+            <div>
+              <h4>വ്യാകരണം</h4>
+              <p>സന്ധി, സമാസം, പ്രയോഗം</p>
+            </div>
+          </div>
+          <div class="topic-chip">
+            <div class="icon" style="background: #fff0f5">📖</div>
+            <div>
+              <h4>സാഹിത്യം</h4>
+              <p>കവികളും കൃതികളും</p>
+            </div>
+          </div>
+          <div class="topic-chip">
+            <div class="icon" style="background: #fff0f5">💬</div>
+            <div>
+              <h4>ഭാഷാശൈലി</h4>
+              <p>പഴയ ചോദ്യപത്രികളിൽ നിന്നുള്ള ഡ്രിൽ</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="wrap">
+        <h2 class="reveal">Everything you need to revise</h2>
+        <p class="section-lead reveal">
+          Lightweight on your phone, serious about your prep — no clutter, just PYQs.
+        </p>
+        <div class="features-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon" style="background: #eef3ff">🎯</div>
+            <h3>Topic &amp; exam browse</h3>
+            <p>
+              Filter by subject and topic, or open full exam papers — the same flows you use inside
+              the app.
+            </p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" style="background: #fff7ea">📊</div>
+            <h3>Progress &amp; accuracy</h3>
+            <p>
+              Session history, streaks, and accuracy stats so you know where to spend your next hour.
+            </p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" style="background: #eafef8">🪙</div>
+            <h3>Coins &amp; daily rewards</h3>
+            <p>
+              Earn coins through practice and daily check-ins. Optional rewarded ads help top up
+              your wallet.
+            </p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" style="background: #fff0f5">🔄</div>
+            <h3>Forgotten questions</h3>
+            <p>Revisit mistakes automatically — spaced repetition built around your quiz history.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" style="background: #eef3ff">👤</div>
+            <h3>Guest or signed in</h3>
+            <p>Start instantly as a guest, or sign in to sync progress and notifications.</p>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon" style="background: #fff7ea">🔔</div>
+            <h3>In-app updates</h3>
+            <p>Notifications for new content and reminders — stay on track between exams.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="how" class="wrap">
+        <h2 class="reveal">How it works</h2>
+        <p class="section-lead reveal">Three steps from install to exam-ready confidence.</p>
+        <div class="steps">
+          <div class="step reveal">
+            <h3>Install &amp; pick a subject</h3>
+            <p>Open PSC PYQ on Android, choose GK, Math, English, or Malayalam.</p>
+          </div>
+          <div class="step reveal">
+            <h3>Quiz by topic or paper</h3>
+            <p>Answer PYQs with instant feedback. Coins unlock deeper sessions when you need them.</p>
+          </div>
+          <div class="step reveal">
+            <h3>Review &amp; repeat</h3>
+            <p>Check history, fix forgotten items, and claim daily rewards before your next mock.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap">
+        <h2 class="reveal">Common questions</h2>
+        <p class="section-lead reveal">Quick answers before you download.</p>
+        <div class="faq-list reveal">
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false">
+              Is PSC PYQ official Kerala PSC?
+              <span class="chev" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                No. PSC PYQ is an independent study companion. We organize previous year questions
+                for practice; we are not affiliated with Kerala Public Service Commission.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false">
+              Is the app free?
+              <span class="chev" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                You can start for free with guest mode. Coins power some sessions; you can earn them
+                through practice, daily rewards, and optional rewarded video ads.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-q" aria-expanded="false">
+              Where are privacy &amp; account policies?
+              <span class="chev" aria-hidden="true">▼</span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Read our full policies on
+                <a href="/policies.html">pscpyq.online/policies.html</a> — including privacy,
+                terms, and account deletion steps.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap">
+        <div class="cta-band reveal">
+          <h2>Ready for your next mock?</h2>
+          <p>Install PSC PYQ on Android and turn spare minutes into real PYQ practice.</p>
+          <a
+            class="btn btn-primary"
+            href="https://play.google.com/store/apps/details?id=com.pscprepcompanion.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Get it on Google Play</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrap">
+      <nav aria-label="Footer">
+        <a href="/policies.html">Privacy &amp; policies</a>
+        <a href="https://play.google.com/store/apps/details?id=com.pscprepcompanion.app" target="_blank" rel="noopener noreferrer">Google Play</a>
+        <a href="mailto:geocartindia@gmail.com?subject=PSC%20PYQ%20support">Contact</a>
+      </nav>
+      <p>© <span id="year"></span> PSC PYQ · Kerala PSC PYQ practice companion</p>
+    </footer>
+
+    <script>
+      (function () {
+        var yearEl = document.getElementById("year");
+        if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+        var menuToggle = document.getElementById("menu-toggle");
+        var navMenu = document.getElementById("nav-menu");
+        if (menuToggle && navMenu) {
+          menuToggle.addEventListener("click", function () {
+            var open = navMenu.classList.toggle("open");
+            menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+          });
+          navMenu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+              navMenu.classList.remove("open");
+              menuToggle.setAttribute("aria-expanded", "false");
+            });
+          });
+        }
+
+        var reveals = document.querySelectorAll(".reveal");
+        if ("IntersectionObserver" in window) {
+          var io = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                  e.target.classList.add("visible");
+                  io.unobserve(e.target);
+                }
+              });
+            },
+            { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+          );
+          reveals.forEach(function (el) {
+            io.observe(el);
+          });
+        } else {
+          reveals.forEach(function (el) {
+            el.classList.add("visible");
+          });
+        }
+
+        function animateCount(el) {
+          var target = parseInt(el.getAttribute("data-count") || "0", 10);
+          var suffix = el.getAttribute("data-suffix") || "";
+          var duration = 1400;
+          var start = performance.now();
+          function tick(now) {
+            var t = Math.min(1, (now - start) / duration);
+            var eased = 1 - Math.pow(1 - t, 3);
+            var val = Math.round(target * eased);
+            el.textContent = val.toLocaleString() + suffix;
+            if (t < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+        }
+
+        var statsStarted = false;
+        var statsIo = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting && !statsStarted) {
+                statsStarted = true;
+                document.querySelectorAll(".stat-value[data-count]").forEach(animateCount);
+                statsIo.disconnect();
+              }
+            });
+          },
+          { threshold: 0.3 }
+        );
+        var statsRow = document.querySelector(".stats-row");
+        if (statsRow) statsIo.observe(statsRow);
+
+        var progressFill = document.getElementById("progress-fill");
+        var progressPct = document.getElementById("progress-pct");
+        var progressStarted = false;
+        function runProgress() {
+          if (progressStarted) return;
+          progressStarted = true;
+          var goal = 68;
+          var start = performance.now();
+          function tick(now) {
+            var t = Math.min(1, (now - start) / 1200);
+            var v = Math.round(goal * (1 - Math.pow(1 - t, 3)));
+            if (progressFill) progressFill.style.width = v + "%";
+            if (progressPct) progressPct.textContent = String(v);
+            if (t < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+        }
+        var phone = document.getElementById("phone-mock");
+        if (phone) {
+          var phoneIo = new IntersectionObserver(
+            function (entries) {
+              if (entries[0].isIntersecting) {
+                runProgress();
+                phoneIo.disconnect();
+              }
+            },
+            { threshold: 0.4 }
+          );
+          phoneIo.observe(phone);
+        }
+
+        var cards = document.querySelectorAll("#phone-cards .mini-card");
+        var cardIndex = 0;
+        setInterval(function () {
+          if (!cards.length) return;
+          cards.forEach(function (c) {
+            c.classList.remove("active");
+          });
+          cardIndex = (cardIndex + 1) % cards.length;
+          cards[cardIndex].classList.add("active");
+        }, 2800);
+
+        var tabs = document.querySelectorAll(".subject-tab");
+        var panels = document.querySelectorAll(".subject-panel");
+        tabs.forEach(function (tab) {
+          tab.addEventListener("click", function () {
+            var id = tab.getAttribute("data-panel");
+            tabs.forEach(function (t) {
+              t.classList.remove("active");
+              t.setAttribute("aria-selected", "false");
+            });
+            tab.classList.add("active");
+            tab.setAttribute("aria-selected", "true");
+            panels.forEach(function (p) {
+              var match = p.id === "panel-" + id;
+              p.classList.toggle("active", match);
+              p.hidden = !match;
+            });
+          });
+        });
+
+        document.querySelectorAll(".faq-item").forEach(function (item) {
+          var btn = item.querySelector(".faq-q");
+          var body = item.querySelector(".faq-a");
+          if (!btn || !body) return;
+          btn.addEventListener("click", function () {
+            var open = item.classList.toggle("open");
+            btn.setAttribute("aria-expanded", open ? "true" : "false");
+            body.style.maxHeight = open ? body.scrollHeight + "px" : "0";
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
