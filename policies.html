@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PSC PYQ Policies</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --border: #e2e8f0;
+        --link: #2035c6;
+        --card: #f8fafc;
+      }
+      body {
+        margin: 0;
+        font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          "Apple Color Emoji",
+          "Segoe UI Emoji";
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.55;
+      }
+      header {
+        border-bottom: 1px solid var(--border);
+        background: var(--card);
+      }
+      main,
+      header > div,
+      footer > div {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 24px;
+        margin: 0;
+      }
+      .meta {
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      nav {
+        margin-top: 12px;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      a {
+        color: var(--link);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      section {
+        margin-top: 22px;
+        padding: 18px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+      }
+      section h2 {
+        margin: 0 0 10px 0;
+        font-size: 20px;
+      }
+      section h3 {
+        margin: 14px 0 6px 0;
+        font-size: 16px;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      footer {
+        margin-top: 26px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .pill {
+        display: inline-block;
+        padding: 2px 10px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        background: #fff;
+        color: var(--muted);
+        font-size: 12px;
+        margin-left: 8px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>PSC PYQ Policies</h1>
+        <div class="meta">
+          App name: PSC PYQ
+          <span class="pill">Android package: com.pscprepcompanion.app</span>
+          <span class="pill">Effective date: 2026-05-18</span>
+        </div>
+        <nav>
+          <a href="#privacy-policy">Privacy Policy</a>
+          <a href="#terms-of-service">Terms of Service</a>
+          <a href="#account-deletion-policy">Account Deletion</a>
+          <a href="./PRIVACY_POLICY.md">Markdown: Privacy</a>
+          <a href="./ACCOUNT_DELETION_POLICY.md">Markdown: Deletion</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="privacy-policy">
+        <h2>Privacy Policy</h2>
+        <p>
+          PSC PYQ is a study companion for Kerala PSC aspirants. This policy describes what we
+          collect and how we use it.
+        </p>
+        <h3>Summary</h3>
+        <ul>
+          <li>Optional sign-in or guest mode.</li>
+          <li>Signed-in: account, quiz, coin wallet, and Pro status on our servers (Supabase).</li>
+          <li>Guest: quiz and coins stay on your device.</li>
+          <li>Coin packs and Pro are sold through Google Play on Android only.</li>
+          <li>We do not sell personal information.</li>
+        </ul>
+        <h3>Information we collect</h3>
+        <ul>
+          <li><strong>Account:</strong> email; optional name and phone on your profile.</li>
+          <li><strong>Quiz activity:</strong> answers, correctness, time spent.</li>
+          <li><strong>Coins (signed-in):</strong> balance, rewards, paper unlocks.</li>
+          <li><strong>Purchases:</strong> Google Play verifies coin packs; we store subscription status for Pro.</li>
+          <li><strong>Local device:</strong> theme, preferences, guest coins.</li>
+          <li><strong>Crash reports:</strong> Sentry in production (no answers or profile in reports).</li>
+        </ul>
+        <h3>Contact</h3>
+        <p>Privacy questions: <a href="mailto:geocartindia@gmail.com">geocartindia@gmail.com</a></p>
+        <p>Full text: <a href="./PRIVACY_POLICY.md">PRIVACY_POLICY.md</a></p>
+      </section>
+
+      <section id="terms-of-service">
+        <h2>Terms of Service</h2>
+        <p>
+          By using PSC PYQ you agree to these terms. The app is an independent study aid, not
+          affiliated with the Kerala PSC or any government agency.
+        </p>
+        <h3>Coins and Pro</h3>
+        <ul>
+          <li>Coins are virtual currency with no cash value.</li>
+          <li>Coin packs are one-time Google Play purchases on Android.</li>
+          <li>Pro subscription (<code>psc_pro</code>) grants unlimited practice while active.</li>
+          <li>Cancel subscriptions in Google Play; deleting your app account does not stop billing.</li>
+        </ul>
+        <p>Full terms are shown inside the app under Profile → Terms of Service.</p>
+      </section>
+
+      <section id="account-deletion-policy">
+        <h2>Account Deletion Policy</h2>
+        <p><strong>Server accounts:</strong> Yes — optional sign-in creates an account on our servers.</p>
+        <h3>How to delete (signed-in)</h3>
+        <ol>
+          <li>Open the app → Profile.</li>
+          <li>Tap <strong>Delete account</strong> and confirm.</li>
+        </ol>
+        <p>
+          This removes your profile, quiz data, coin wallet, unlocks, and subscription records on
+          our servers. Cancel Google Play subscriptions separately in Google Play.
+        </p>
+        <h3>Guest / local only</h3>
+        <ul>
+          <li>Uninstall the app, or</li>
+          <li>Android: Settings → Apps → PSC PYQ → Storage → Clear storage.</li>
+        </ul>
+        <p>Full text: <a href="./ACCOUNT_DELETION_POLICY.md">ACCOUNT_DELETION_POLICY.md</a></p>
+      </section>
+    </main>
+
+    <footer>
+      <div>
+        Host this page at a stable URL for Google Play Console. Update the effective date when
+        content changes.
+      </div>
+    </footer>
+  </body>
+</html>
