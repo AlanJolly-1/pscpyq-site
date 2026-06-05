@@ -5,7 +5,7 @@
 **Android package:** `com.pscprepcompanion.app`  
 **Effective date:** 2026-06-05  
 **Data protection contact:** geocartindia@gmail.com
-
+ 
 This document describes how PSC PYQ handles personal data in line with applicable privacy laws, including India's **Digital Personal Data Protection Act, 2023 (DPDP Act)** and common app-store requirements (Google Play Data safety, account deletion). It supplements our [Privacy Policy](./PRIVACY_POLICY.md).
 
 > This is an operational compliance summary for users and store reviewers. It is not legal advice.
