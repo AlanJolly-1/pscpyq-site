@@ -112,9 +112,9 @@ PSC PYQ relies on third-party services, including:
 
 Your use of those services is also subject to their respective terms and privacy policies. We are not responsible for third-party outages, policy changes, or actions outside our reasonable control.
 
-## 11. Privacy
+## 11. Privacy and data compliance
 
-Our [Privacy Policy](./PRIVACY_POLICY.md) explains what data we collect and how we use it. By using PSC PYQ you also agree to that policy.
+Our [Privacy Policy](./PRIVACY_POLICY.md) explains what data we collect and how we use it. Our [Data Compliance](./DATA_COMPLIANCE.md) document describes your rights (including under India's DPDP Act), retention, and security practices. By using PSC PYQ you also agree to those documents.
 
 ## 12. Account deletion and termination
 
