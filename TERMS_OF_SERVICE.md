@@ -41,6 +41,7 @@ You agree **not** to:
 
 We may investigate abuse and suspend or terminate access where we reasonably believe these Terms have been violated.
 
+
 ## 5. Study content and disclaimers
 
 We work to keep questions, answers, and explanations accurate and up to date, but PSC PYQ is provided **"as is"** and **"as available"**.
