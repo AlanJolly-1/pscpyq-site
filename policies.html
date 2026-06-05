@@ -111,8 +111,10 @@
         <nav>
           <a href="#privacy-policy">Privacy Policy</a>
           <a href="#terms-of-service">Terms of Service</a>
+          <a href="#data-compliance">Data Compliance</a>
           <a href="#account-deletion-policy">Account Deletion</a>
           <a href="./PRIVACY_POLICY.md">Markdown: Privacy</a>
+          <a href="./DATA_COMPLIANCE.md">Markdown: Compliance</a>
           <a href="./TERMS_OF_SERVICE.md">Markdown: Terms</a>
           <a href="./ACCOUNT_DELETION_POLICY.md">Markdown: Deletion</a>
         </nav>
@@ -129,17 +131,17 @@
         <h3>Summary</h3>
         <ul>
           <li>Optional sign-in or guest mode.</li>
-          <li>Signed-in: account, quiz, coin wallet, and Pro status on our servers (Supabase).</li>
-          <li>Guest: quiz and coins stay on your device.</li>
-          <li>Coin packs and Pro are sold through Google Play on Android only.</li>
+          <li>Signed-in: account, coin wallet, unlocks, referrals, and Pro status on our servers (Supabase).</li>
+          <li>Quiz history and answers stay on your device — not uploaded.</li>
+          <li>Coin packs: Google Play (Android) or Razorpay (web). Pro subscription via Google Play.</li>
           <li>We do not sell personal information.</li>
         </ul>
         <h3>Information we collect</h3>
         <ul>
           <li><strong>Account:</strong> email; optional name and phone on your profile.</li>
-          <li><strong>Quiz activity:</strong> answers, correctness, time spent.</li>
+          <li><strong>Quiz activity:</strong> answers, history, badges — stored on your device only.</li>
           <li><strong>Coins (signed-in):</strong> balance, rewards, paper unlocks.</li>
-          <li><strong>Purchases:</strong> Google Play verifies coin packs; we store subscription status for Pro.</li>
+          <li><strong>Purchases:</strong> Google Play or Razorpay verification; Pro subscription status.</li>
           <li><strong>Local device:</strong> theme, preferences, guest coins.</li>
           <li><strong>Crash reports:</strong> Sentry in production (no answers or profile in reports).</li>
         </ul>
@@ -170,6 +172,29 @@
         <p>Full text: <a href="./TERMS_OF_SERVICE.md">TERMS_OF_SERVICE.md</a> (also in-app: Profile → Terms of Service)</p>
       </section>
 
+      <section id="data-compliance">
+        <h2>Data Compliance</h2>
+        <p>
+          PSC PYQ aligns with India&rsquo;s <strong>Digital Personal Data Protection Act, 2023 (DPDP Act)</strong>
+          and Google Play data-safety requirements. We act as the Data Fiduciary for personal data
+          processed through the app.
+        </p>
+        <h3>Your rights</h3>
+        <ul>
+          <li><strong>Access / copy:</strong> email geocartindia@gmail.com or view profile in the app.</li>
+          <li><strong>Correction:</strong> edit name and phone on Profile.</li>
+          <li><strong>Erasure:</strong> Profile → Delete account (see Account Deletion below).</li>
+          <li><strong>Grievance:</strong> email geocartindia@gmail.com — we aim to respond within 30 days.</li>
+        </ul>
+        <h3>Security &amp; retention</h3>
+        <ul>
+          <li>HTTPS in transit; Supabase Row-Level Security for account data.</li>
+          <li>Quiz data stays on your device; server account data deleted on account deletion.</li>
+          <li>No sale of personal data. Optional rewarded ads only when you choose to watch.</li>
+        </ul>
+        <p>Full text: <a href="./DATA_COMPLIANCE.md">DATA_COMPLIANCE.md</a></p>
+      </section>
+
       <section id="account-deletion-policy">
         <h2>Account Deletion Policy</h2>
         <p><strong>Server accounts:</strong> Yes — optional sign-in creates an account on our servers.</p>
@@ -179,8 +204,9 @@
           <li>Tap <strong>Delete account</strong> and confirm.</li>
         </ol>
         <p>
-          This removes your profile, quiz data, coin wallet, unlocks, and subscription records on
-          our servers. Cancel Google Play subscriptions separately in Google Play.
+          This removes your profile, coin wallet, unlocks, referral records, and subscription
+          records on our servers, and clears local quiz history on your device. Cancel Google Play
+          subscriptions separately in Google Play.
         </p>
         <h3>Guest / local only</h3>
         <ul>
